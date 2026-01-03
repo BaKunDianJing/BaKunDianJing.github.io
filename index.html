@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三角洲巴坤电竞 | DMA 护航</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'esports-dark': '#09090b', // Zinc 950
+                        'esports-card': '#18181b', // Zinc 900
+                        'esports-green': '#34d399', // Emerald 400
+                        'esports-gold': '#facc15', // Yellow 400
+                    },
+                    fontFamily: {
+                        'mono': ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #34d399;
+        }
+        
+        .glass-effect {
+            background: rgba(24, 24, 27, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-esports-dark text-gray-300 font-sans antialiased selection:bg-esports-green selection:text-black min-h-screen flex flex-col">
+
+    <!-- Top Bar -->
+    <div class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 glass-effect">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center text-xs md:text-sm font-mono">
+            <!-- Beijing Time -->
+            <div class="flex items-center space-x-2 text-esports-green">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-esports-green opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-esports-green"></span>
+                </span>
+                <span id="beijing-time">LOADING...</span>
+            </div>
+            
+            <!-- Odds Ticker -->
+            <div class="flex items-center bg-esports-green/10 px-3 py-1 rounded border border-esports-green/20">
+                <span class="text-white font-bold mr-2">今日哈夫币赔付</span>
+                <span class="text-esports-gold font-bold animate-pulse">43:1</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-20 pb-12 px-4 md:px-8 max-w-5xl mx-auto w-full">
+        
+        <!-- Hero Section -->
+        <section class="text-center mb-16 mt-8 animate-fade-in-up">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-esports-gold/30 bg-esports-gold/5 text-esports-gold text-xs font-bold tracking-wider uppercase">
+                PROFESSIONAL BOOSTING SERVICE
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight leading-tight mb-6">
+                三角洲巴坤电竞<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-esports-green to-teal-500">DMA 技术加持</span>，稳稳得吃！
+            </h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                顶级寻宝鼠 + 硬件级 DMA 直连，为您提供最安全的护航体验。
+            </p>
+        </section>
+
+        <!-- Core Advantages (Grid) -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+            <!-- Advantage 1 -->
+            <div class="p-6 rounded-xl bg-esports-card border border-white/5 hover:border-esports-green/30 transition-all duration-300 group">
+                <div class="w-12 h-12 bg-esports-green/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-esports-green/20">
+                    <svg class="w-6 h-6 text-esports-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">三角洲寻宝鼠 + DMA 直连</h3>
+                <p class="text-sm text-gray-400">硬件级读写，绕过常规检测。透视物资、敌人位置，信息差就是战斗力。</p>
+            </div>
+
+            <!-- Advantage 2 -->
+            <div class="p-6 rounded-xl bg-esports-card border border-white/5 hover:border-red-500/30 transition-all duration-300 group">
+                <div class="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-500/20">
+                    <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">拒绝十年雷达/内存拉闸</h3>
+                <p class="text-sm text-gray-400">告别传统软件辅助的封号风险。功能拉满无短板，稳定奔放，绝不拉闸。</p>
+            </div>
+        </section>
+
+        <!-- Service & Safety -->
+        <section class="mb-16 space-y-8">
+            <div class="bg-gradient-to-r from-esports-card to-transparent border-l-4 border-esports-green p-6">
+                <h2 class="text-2xl font-bold text-white mb-4">服务模式</h2>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-esports-green mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-gray-300"><strong class="text-white">专业二带一护航：</strong> 两名顶级打手保驾护航，您只需负责舔包。</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-esports-green mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-gray-300"><strong class="text-white">寻宝服务：</strong> 快速定位高价值物品，效率翻倍。</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-esports-green mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-gray-300"><strong class="text-white">听老板指挥：</strong> 您的意志就是我们的战术，指哪打哪。</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-gradient-to-r from-esports-card to-transparent border-l-4 border-esports-gold p-6">
+                <h2 class="text-2xl font-bold text-white mb-4">安心承诺</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-white/5 p-3 rounded">
+                        <div class="text-esports-gold font-bold mb-1">自动换号冷处理</div>
+                        <div class="text-gray-400">规避连坐风险</div>
+                    </div>
+                    <div class="bg-white/5 p-3 rounded">
+                        <div class="text-esports-gold font-bold mb-1">规避追缴</div>
+                        <div class="text-gray-400">交易流程隐蔽安全</div>
+                    </div>
+                    <div class="bg-white/5 p-3 rounded">
+                        <div class="text-esports-gold font-bold mb-1">账号安全</div>
+                        <div class="text-gray-400">严格保护客户隐私</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="mb-12">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center flex items-center justify-center">
+                <span class="w-8 h-1 bg-esports-green rounded-full mr-4"></span>
+                服务价格表
+                <span class="w-8 h-1 bg-esports-green rounded-full ml-4"></span>
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Card 1 -->
+                <div class="bg-esports-card rounded-xl p-6 border border-white/5 flex flex-col items-center hover:scale-105 transition-transform duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-gray-700 text-white text-[10px] px-2 py-1 rounded-bl-lg font-bold">HOT</div>
+                    <h3 class="text-lg font-bold text-white mb-2">体验单</h3>
+                    <div class="text-3xl font-black text-esports-green mb-1">¥20<span class="text-sm font-normal text-gray-400">/单</span></div>
+                    <p class="text-xs text-gray-500 mb-4 text-center">监狱 / 绝航</p>
+                    <button class="w-full py-2 rounded bg-white/10 hover:bg-esports-green hover:text-black transition-colors text-sm font-bold">立即预约</button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-esports-card rounded-xl p-6 border border-white/5 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-lg font-bold text-esports-gold mb-2">机密</h3>
+                    <div class="text-3xl font-black text-white mb-1">¥40<span class="text-sm font-normal text-gray-400">/h</span></div>
+                    <p class="text-xs text-gray-500 mb-4 text-center">高性价比护航</p>
+                    <button class="w-full py-2 rounded bg-white/10 hover:bg-esports-gold hover:text-black transition-colors text-sm font-bold">立即预约</button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-esports-card rounded-xl p-6 border border-esports-green/50 shadow-[0_0_15px_rgba(52,211,153,0.1)] flex flex-col items-center hover:scale-105 transition-transform duration-300 transform scale-105 z-10">
+                    <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-esports-green to-transparent"></div>
+                    <h3 class="text-lg font-bold text-esports-green mb-2">绝密</h3>
+                    <div class="text-3xl font-black text-white mb-1">¥70<span class="text-sm font-normal text-gray-400">/h</span></div>
+                    <p class="text-xs text-gray-500 mb-4 text-center">火力全开 / 顶配服务</p>
+                    <button class="w-full py-2 rounded bg-esports-green text-black hover:bg-green-400 transition-colors text-sm font-bold shadow-lg shadow-green-500/20">立即预约</button>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-esports-card rounded-xl p-6 border border-white/5 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-lg font-bold text-red-500 mb-2">监狱</h3>
+                    <div class="text-3xl font-black text-white mb-1">¥85<span class="text-sm font-normal text-gray-400">/h</span></div>
+                    <p class="text-xs text-gray-500 mb-4 text-center">高难度 / 极速通关</p>
+                    <button class="w-full py-2 rounded bg-white/10 hover:bg-red-500 hover:text-white transition-colors text-sm font-bold">立即预约</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / CTA -->
+    <footer class="bg-black/50 border-t border-white/10 py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-esports-gold font-bold animate-pulse mb-2">⚠️ 体验单/护航单火爆，需提前排队预约</p>
+            <p class="text-gray-600 text-xs">© 2024 三角洲巴坤电竞 | Delta Force Boosting Service</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Time -->
+    <script>
+        function updateTime() {
+            const timeDisplay = document.getElementById('beijing-time');
+            const now = new Date();
+            
+            // Convert to Beijing Time (UTC+8)
+            // Using Intl.DateTimeFormat for robust timezone handling
+            const options = {
+                timeZone: 'Asia/Shanghai',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            };
+            
+            try {
+                const formatter = new Intl.DateTimeFormat('zh-CN', options);
+                const parts = formatter.formatToParts(now);
+                
+                // Map parts to YYYY-MM-DD HH:mm:ss format manually for precision
+                const mapping = {};
+                parts.forEach(({type, value}) => mapping[type] = value);
+                
+                const timeString = `${mapping.year}-${mapping.month}-${mapping.day} ${mapping.hour}:${mapping.minute}:${mapping.second}`;
+                timeDisplay.textContent = timeString;
+            } catch (e) {
+                // Fallback for older browsers
+                timeDisplay.textContent = now.toISOString().replace('T', ' ').substring(0, 19);
+            }
+        }
+
+        // Update immediately and then every second
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+
+    <!-- Crisp Chat Placeholder -->
+    <!-- 
+        TODO: Replace WEBSITE_ID with your actual Crisp Website ID 
+    -->
+    <script type="text/javascript">
+        // window.$crisp=[];
+        // window.CRISP_WEBSITE_ID="YOUR_CRISP_ID_HERE";
+        // (function(){
+        //   d=document;s=d.createElement("script");
+        //   s.src="https://client.crisp.chat/l.js";
+        //   s.async=1;
+        //   d.getElementsByTagName("head")[0].appendChild(s);
+        // })();
+        console.log("Crisp Chat Placeholder: 请在此处替换为您的 Crisp ID");
+    </script>
+</body>
+</html>
